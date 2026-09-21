@@ -1,24 +1,42 @@
-# Maenam Villa Hotel — Modern Redesign
+# Maenam Villa Hotel — V2
 
-โปรเจกต์เว็บใหม่แบบ Vite + Vanilla JS/CSS สำหรับ Maenam Villa Hotel โดยยึดข้อมูลจากเว็บไซต์เดิมที่เข้าถึงได้ ณ วันที่ 22 ก.ย. 2026
+Modern static website for Maenam Villa Hotel, based on verified information from the original website.
 
-## สิ่งที่นำมาจากเว็บเดิม
-- ชื่อ: MAENAM VILLA HOTEL
-- tagline: “สงบ เงียบ เป็นส่วนตัว บนชายหาดเเม่น้ำ สมุย”
-- ประเภทห้อง: Beach Front Bangalo, Bangalo, Sea View, Standard, Balcony, Single
-- ข้อมูลติดต่อและที่อยู่
-- รายการแหล่งท่องเที่ยว 16 จุดจากหน้าเกาะสมุย
+## V2
+- Six dedicated room detail pages
+- Thai / English language switcher
+- Real source Gallery embedded from `https://www.maenamvilla.com/gallery.html`
+- Google Maps embed using the published hotel address
+- Mobile-first responsive UI
+- GitHub Pages deployment workflow
+- No invented room prices, dimensions or facilities
 
-## รูปภาพ
-ระบบ runtime นี้ไม่สามารถดาวน์โหลด binary image จากเว็บไซต์ต้นทางมาเก็บในโปรเจกต์ได้โดยตรง จึงวาง image slots ใน `src/styles.css` ไว้ให้แทนด้วย asset จริงจากเว็บไซต์ต้นทางก่อน deploy โดยหน้าเว็บต้นทางที่มีภาพ ได้แก่ `about.html` และ `journey.html`.
+## Room pages
+- /rooms/beach-front-bangalo.html
+- /rooms/bangalo.html
+- /rooms/sea-view.html
+- /rooms/standard.html
+- /rooms/balcony.html
+- /rooms/single.html
 
-## Run
+## Source facts
+The original site describes Maenam Villa as a small beachfront resort with 14 rooms at the end of Maenam Beach and emphasizes a quiet, private atmosphere. The source site lists the six room categories used here. The source gallery is available at the original Gallery page.
+
+Contact published by the source:
+- +66 97 921 1007
+- +66 83 083 903 9930
+- admin@maenamvilla.com
+- LINE: Kijpaituraya
+- WhatsApp: +66 97 921 1007
+
+## Local preview
+No build step is required.
+
 ```bash
-npm install
-npm run dev
+python -m http.server 8080
 ```
 
-## Build
-```bash
-npm run build
-```
+Open http://localhost:8080
+
+## GitHub Pages
+The repository includes `.github/workflows/pages.yml`. In GitHub, set **Settings → Pages → Source** to **GitHub Actions** if Pages is not already enabled. Every push to `main` then deploys the static site.
