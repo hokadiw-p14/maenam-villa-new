@@ -1,8 +1,15 @@
 {
-  "name": "maenam-villa-modern",
+  "name": "maenam-villa-new",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": { "dev": "vite", "build": "vite build", "preview": "vite preview" },
-  "devDependencies": { "vite": "latest" }
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:rooms": "node scripts/build-rooms.mjs"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  }
 }
